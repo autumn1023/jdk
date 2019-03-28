@@ -10,7 +10,7 @@ RUN apk --update add curl ca-certificates tar &&  \
 
     curl -Ls https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64/glibc-2.21-r2.apk > /tmp/glibc-2.21-r2.apk && \
 
-    apk add --allow-untrusted /tmp/glibc-2.21-r2.apk
+    apk add --allow-untrusted /tmp/glibc-2.21-r2.apk 
 
 # Java Version
 
@@ -26,7 +26,7 @@ ENV JAVA_PACKAGE       jdk
 
 RUN mkdir /opt && curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" \
 
-  http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-b${JAVA_VERSION_BUILD}/${JAVA_PACKAGE}-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.tar.gz \
+  http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-b${JAVA_VERSION_BUILD}/${JAVA_PACKAGE}-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.tar.gz  \
 
     | tar -xzf - -C /opt && \
 
