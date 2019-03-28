@@ -1,6 +1,6 @@
 # AlpineLinux with a glibc-2.21 and Oracle Java 7
 
-FROM alpine:3.2
+FROM alpine:3.9
 
 MAINTAINER Anastas Dancha [...]
 
@@ -16,9 +16,9 @@ RUN apk --update add curl ca-certificates tar &&
 
 ENV JAVA_VERSION_MAJOR 7
 
-ENV JAVA_VERSION_MINOR 45
+ENV JAVA_VERSION_MINOR 19
 
-ENV JAVA_VERSION_BUILD 14
+ENV JAVA_VERSION_BUILD 15
 
 ENV JAVA_PACKAGE       jdk
 
